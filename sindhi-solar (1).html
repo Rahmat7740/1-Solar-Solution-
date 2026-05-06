@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1° Solar Solution – Best Solar Installation Company in Attock, Punjab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green:#2e7d32;--gdark:#1b5e20;--glight:#43a047;--gpale:#e8f5e9;
+  --yellow:#f9a825;--ylite:#fff9c4;
+  --white:#fff;--offwhite:#f9f9f9;--gray:#757575;--lgray:#eeeeee;
+  --dark:#1c1c1c;--dark2:#2d2d2d;--border:#e0e0e0;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Open Sans',sans-serif;color:var(--dark);background:#fff;overflow-x:hidden;}
+a{text-decoration:none;color:inherit;}
+img{max-width:100%;display:block;}
+
+/* ══ TOPBAR ══ */
+#topbar{
+  background:var(--gdark);color:rgba(255,255,255,.88);
+  font-size:.75rem;padding:.5rem 5%;
+  display:flex;justify-content:space-between;align-items:center;gap:1rem;
+}
+.tb-left{display:flex;gap:1.5rem;align-items:center;flex-wrap:wrap;}
+.tb-left a,.tb-left span{color:rgba(255,255,255,.88);display:flex;align-items:center;gap:.35rem;}
+.tb-left a:hover{color:var(--yellow);}
+.tb-right{display:flex;gap:.5rem;}
+.tb-icon{
+  width:26px;height:26px;border-radius:50%;
+  background:rgba(255,255,255,.12);font-size:.75rem;
+  display:flex;align-items:center;justify-content:center;
+  transition:background .2s;
+}
+.tb-icon:hover{background:var(--yellow);color:var(--dark);}
+
+/* ══ NAV ══ */
+#nav{
+  position:sticky;top:0;z-index:999;background:#fff;
+  box-shadow:0 2px 16px rgba(0,0,0,.09);
+  padding:0 5%;display:flex;align-items:center;justify-content:space-between;
+  transition:box-shadow .3s;
+}
+.logo-wrap{display:flex;align-items:center;gap:.6rem;padding:.9rem 0;}
+.logo-img-box{
+  width:48px;height:48px;border-radius:10px;
+  background:linear-gradient(135deg,var(--green),var(--glight));
+  display:flex;align-items:center;justify-content:center;font-size:1.6rem;
+  flex-shrink:0;
+}
+.logo-text{font-family:'Montserrat',sans-serif;font-weight:900;font-size:1.25rem;color:var(--gdark);line-height:1.1;}
+.logo-text span{color:var(--yellow);}
+.logo-text small{display:block;font-size:.6rem;font-weight:500;color:var(--gray);letter-spacing:.08em;text-transform:uppercase;}
+#nav ul{list-style:none;display:flex;}
+#nav ul li{position:relative;}
+#nav ul li>a{
+  display:block;padding:1.3rem .9rem;
+  font-family:'Montserrat',sans-serif;font-weight:600;font-size:.75rem;
+  letter-spacing:.04em;text-transform:uppercase;color:var(--dark2);
+  transition:color .2s;position:relative;
+}
+#nav ul li>a::after{
+  content:'';position:absolute;bottom:0;left:0;right:0;height:3px;
+  background:var(--green);transform:scaleX(0);transform-origin:left;transition:transform .3s;
+}
+#nav ul li>a:hover{color:var(--green);}
+#nav ul li>a:hover::after{transform:scaleX(1);}
+#nav ul li ul{
+  position:absolute;top:100%;left:0;min-width:200px;
+  background:#fff;box-shadow:0 8px 30px rgba(0,0,0,.12);
+  border-top:3px solid var(--green);opacity:0;pointer-events:none;
+  transform:translateY(8px);transition:all .25s;z-index:99;
+}
+#nav ul li:hover ul{opacity:1;pointer-events:all;transform:none;}
+#nav ul li ul li a{
+  padding:.7rem 1.2rem;font-size:.75rem;color:var(--dark2);
+  display:block;border-bottom:1px solid var(--lgray);
+  transition:background .2s,color .2s;
+}
+#nav ul li ul li a::after{display:none;}
+#nav ul li ul li a:hover{background:var(--gpale);color:var(--green);}
+.nav-cta{
+  background:var(--green);color:#fff;
+  padding:.6rem 1.3rem;border-radius:4px;
+  font-family:'Montserrat',sans-serif;font-weight:700;font-size:.78rem;
+  display:flex;align-items:center;gap:.4rem;white-space:nowrap;
+  transition:background .2s,transform .2s;
+}
+.nav-cta:hover{background:var(--gdark);transform:translateY(-1px);}
+
+/* ══ HERO SLIDER ══ */
+#hero{position:relative;overflow:hidden;height:90vh;min-height:500px;}
+.slide{position:absolute;inset:0;opacity:0;transition:opacity 1s ease;display:flex;align-items:center;}
+.slide.active{opacity:1;z-index:1;}
+.slide-bg{position:absolute;inset:0;background-size:cover;background-position:center;}
+.slide-overlay{position:absolute;inset:0;background:linear-gradient(105deg,rgba(0,0,0,.75) 0%,rgba(0,0,0,.28) 100%);}
+.slide-content{position:relative;z-index:2;padding:0 5%;max-width:660px;color:#fff;}
+.slide-tag{
+  display:inline-flex;align-items:center;gap:.5rem;
+  background:rgba(249,168,37,.22);border:1px solid rgba(249,168,37,.5);
+  color:#fff9c4;font-size:.68rem;font-family:'Montserrat',sans-serif;font-weight:700;
+  letter-spacing:.15em;text-transform:uppercase;padding:.32rem .9rem;
+  border-radius:100px;margin-bottom:1.1rem;
+}
+.slide-content h1{
+  font-family:'Montserrat',sans-serif;font-weight:900;
+  font-size:clamp(1.9rem,4.5vw,3.6rem);line-height:1.1;margin-bottom:.9rem;
+}
+.slide-content h1 em{color:var(--yellow);font-style:normal;}
+.slide-content p{font-size:.95rem;line-height:1.75;color:rgba(255,255,255,.85);margin-bottom:1.8rem;max-width:520px;}
+.slide-btns{display:flex;gap:.8rem;flex-wrap:wrap;}
+.s-btn{padding:.75rem 1.6rem;border-radius:4px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:.8rem;letter-spacing:.04em;transition:all .25s;}
+.s-btn-main{background:var(--green);color:#fff;}
+.s-btn-main:hover{background:var(--gdark);transform:translateY(-2px);box-shadow:0 8px 22px rgba(46,125,50,.4);}
+.s-btn-outline{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.55);}
+.s-btn-outline:hover{background:rgba(255,255,255,.1);border-color:#fff;}
+.slide-worker{position:absolute;right:5%;bottom:0;z-index:3;height:88%;object-fit:contain;filter:drop-shadow(0 0 30px rgba(0,0,0,.35));animation:workerBob 5s ease-in-out infinite;}
+@keyframes workerBob{0%,100%{transform:translateY(0);}50%{transform:translateY(-12px);}}
+.slider-dots{position:absolute;bottom:1.4rem;left:50%;transform:translateX(-50%);z-index:5;display:flex;gap:.5rem;}
+.dot{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.38);cursor:pointer;transition:all .3s;border:none;padding:0;}
+.dot.active{background:var(--yellow);transform:scale(1.35);}
+.sarrow{
+  position:absolute;top:50%;z-index:5;transform:translateY(-50%);
+  width:42px;height:42px;border-radius:50%;
+  background:rgba(255,255,255,.14);backdrop-filter:blur(4px);
+  border:1px solid rgba(255,255,255,.28);color:#fff;font-size:1rem;
+  display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .2s;
+}
+.sarrow:hover{background:var(--green);}
+.sa-prev{left:1.5%;}
+.sa-next{right:1.5%;}
+
+/* ══ STATS STRIP ══ */
+#stats-strip{background:var(--green);display:grid;grid-template-columns:repeat(4,1fr);}
+.stp{padding:2rem 1.5rem;text-align:center;border-right:1px solid rgba(255,255,255,.15);transition:background .3s;}
+.stp:last-child{border:none;}
+.stp:hover{background:rgba(0,0,0,.1);}
+.stp-num{font-family:'Montserrat',sans-serif;font-weight:900;font-size:2.4rem;color:#fff;line-height:1;}
+.stp-num sup{font-size:1.3rem;color:var(--yellow);}
+.stp-lbl{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-top:.4rem;}
+
+/* ══ LAYOUT HELPERS ══ */
+.sec{padding:5.5rem 5%;}
+.sec-alt{background:var(--offwhite);}
+.wrap{max-width:1200px;margin:0 auto;}
+.eyebrow{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.67rem;letter-spacing:.22em;text-transform:uppercase;color:var(--green);margin-bottom:.6rem;}
+.eyebrow-w{color:var(--yellow);}
+.sh2{font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(1.55rem,2.8vw,2.35rem);line-height:1.2;color:var(--dark);margin-bottom:.8rem;}
+.sh2-w{color:#fff;}
+.sp{font-size:.9rem;color:var(--gray);line-height:1.85;max-width:580px;}
+.sp-w{color:rgba(255,255,255,.75);}
+.divbar{width:52px;height:4px;border-radius:2px;background:linear-gradient(90deg,var(--green),var(--yellow));margin:.8rem 0 1.8rem;}
+.divbar-c{margin:.8rem auto 1.8rem;}
+.btn{display:inline-block;padding:.72rem 1.6rem;border-radius:4px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:.8rem;letter-spacing:.04em;transition:all .25s;}
+.btn-g{background:var(--green);color:#fff;}
+.btn-g:hover{background:var(--gdark);transform:translateY(-2px);box-shadow:0 8px 22px rgba(46,125,50,.3);}
+.btn-y{background:var(--yellow);color:var(--dark);}
+.btn-y:hover{background:#e65100;color:#fff;transform:translateY(-2px);}
+.btn-ol{border:2px solid rgba(255,255,255,.5);color:#fff;}
+.btn-ol:hover{background:rgba(255,255,255,.12);border-color:#fff;}
+
+/* ══ ABOUT ══ */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4.5rem;align-items:center;}
+.about-imgs{position:relative;padding-bottom:1.5rem;}
+.about-main{width:100%;height:400px;object-fit:cover;border-radius:12px;box-shadow:0 20px 55px rgba(0,0,0,.13);}
+.about-thumb{position:absolute;bottom:-10px;right:-18px;width:155px;height:115px;object-fit:cover;border-radius:10px;border:4px solid #fff;box-shadow:0 8px 28px rgba(0,0,0,.16);}
+.about-badge{position:absolute;top:18px;left:-18px;background:var(--green);color:#fff;border-radius:12px;padding:1.1rem 1.4rem;text-align:center;box-shadow:0 8px 22px rgba(46,125,50,.38);}
+.about-badge .num{font-family:'Montserrat',sans-serif;font-weight:900;font-size:2.1rem;color:var(--yellow);line-height:1;}
+.about-badge .lbl{font-size:.66rem;opacity:.85;margin-top:.2rem;}
+.about-pts{list-style:none;margin-top:1.1rem;}
+.about-pts li{display:flex;gap:.7rem;align-items:flex-start;padding:.6rem 0;border-bottom:1px solid var(--border);font-size:.87rem;}
+.about-pts li:last-child{border:none;}
+.chk{width:21px;height:21px;border-radius:50%;flex-shrink:0;margin-top:2px;background:var(--gpale);color:var(--green);font-size:.72rem;display:flex;align-items:center;justify-content:center;font-weight:700;}
+.about-pts strong{display:block;color:var(--dark);font-weight:600;margin-bottom:.12rem;}
+
+/* ══ SERVICES ══ */
+.exp-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--border);}
+.exp-card{display:flex;gap:1.1rem;align-items:flex-start;padding:1.8rem;border-bottom:1px solid var(--border);border-right:1px solid var(--border);transition:background .3s;position:relative;overflow:hidden;}
+.exp-card:nth-child(2n){border-right:none;}
+.exp-card:nth-last-child(-n+2){border-bottom:none;}
+.exp-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(var(--green),var(--yellow));transform:scaleY(0);transform-origin:top;transition:transform .4s;}
+.exp-card:hover{background:var(--gpale);}
+.exp-card:hover::before{transform:scaleY(1);}
+.exp-icon{width:62px;height:62px;border-radius:10px;object-fit:cover;flex-shrink:0;box-shadow:0 3px 12px rgba(0,0,0,.08);transition:transform .3s;}
+.exp-card:hover .exp-icon{transform:scale(1.06);}
+.exp-body h3{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.92rem;color:var(--dark);margin-bottom:.35rem;}
+.exp-body p{font-size:.81rem;color:var(--gray);line-height:1.68;}
+.exp-lnk{display:inline-flex;align-items:center;gap:.3rem;color:var(--green);font-size:.76rem;font-weight:700;margin-top:.45rem;font-family:'Montserrat',sans-serif;transition:gap .2s;}
+.exp-card:hover .exp-lnk{gap:.55rem;}
+
+/* ══ EMPOWER ══ */
+#empower{background:linear-gradient(135deg,var(--gdark) 0%,var(--green) 100%);padding:5rem 5%;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;position:relative;overflow:hidden;}
+#empower::before{content:'';position:absolute;right:-180px;top:-180px;width:460px;height:460px;border-radius:50%;background:rgba(255,255,255,.04);}
+.emp-txt{position:relative;z-index:1;}
+.emp-feat{list-style:none;margin-top:1.4rem;}
+.emp-feat li{display:flex;gap:.7rem;align-items:center;padding:.72rem 0;border-bottom:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.88);font-size:.87rem;}
+.emp-feat li:last-child{border:none;}
+.edot{width:7px;height:7px;border-radius:50%;background:var(--yellow);flex-shrink:0;}
+.emp-cards{display:grid;grid-template-columns:1fr 1fr;gap:1rem;position:relative;z-index:1;}
+.emp-c{background:rgba(255,255,255,.1);backdrop-filter:blur(5px);border:1px solid rgba(255,255,255,.18);border-radius:12px;padding:1.6rem 1.3rem;text-align:center;}
+.emp-c .num{font-family:'Montserrat',sans-serif;font-weight:900;font-size:2.2rem;color:var(--yellow);line-height:1;}
+.emp-c .lbl{font-size:.68rem;color:rgba(255,255,255,.65);margin-top:.35rem;text-transform:uppercase;letter-spacing:.1em;}
+
+/* ══ PROCESS ══ */
+.proc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;position:relative;}
+.proc-grid::before{content:'';position:absolute;top:42px;left:12%;width:76%;height:2px;background:linear-gradient(90deg,var(--green),var(--yellow));opacity:.22;}
+.proc-card{text-align:center;position:relative;}
+.proc-n{width:4.3rem;height:4.3rem;border-radius:50%;margin:0 auto 1.1rem;background:#fff;border:2.5px solid var(--green);display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-weight:900;font-size:1.2rem;color:var(--green);position:relative;z-index:1;box-shadow:0 4px 16px rgba(46,125,50,.16);transition:all .3s;}
+.proc-card:hover .proc-n{background:var(--green);color:#fff;transform:scale(1.1);}
+.proc-img{width:52px;height:52px;object-fit:cover;border-radius:50%;margin:0 auto .75rem;border:2px solid var(--gpale);}
+.proc-card h4{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.85rem;margin-bottom:.4rem;}
+.proc-card p{font-size:.78rem;color:var(--gray);line-height:1.62;}
+
+/* ══ PROJECTS ══ */
+.proj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;}
+.proj-card{border-radius:10px;overflow:hidden;background:#fff;border:1px solid var(--border);transition:all .3s;box-shadow:0 2px 10px rgba(0,0,0,.05);}
+.proj-card:hover{transform:translateY(-5px);box-shadow:0 16px 44px rgba(0,0,0,.11);}
+.proj-img-wrap{overflow:hidden;position:relative;}
+.proj-img{width:100%;height:200px;object-fit:cover;transition:transform .4s;display:block;}
+.proj-card:hover .proj-img{transform:scale(1.05);}
+.proj-tag{position:absolute;top:10px;left:10px;background:var(--green);color:#fff;font-family:'Montserrat',sans-serif;font-weight:700;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;padding:.26rem .6rem;border-radius:3px;}
+.proj-body{padding:1rem 1.1rem 1.2rem;}
+.proj-body h4{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.85rem;margin-bottom:.28rem;color:var(--dark);}
+.proj-body p{font-size:.78rem;color:var(--gray);}
+.proj-lnk{display:inline-flex;align-items:center;gap:.28rem;color:var(--green);font-size:.74rem;font-weight:700;font-family:'Montserrat',sans-serif;margin-top:.45rem;transition:gap .2s;}
+.proj-card:hover .proj-lnk{gap:.5rem;}
+
+/* ══ WHY ══ */
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;}
+.why-img{width:100%;height:440px;object-fit:cover;border-radius:12px;box-shadow:0 20px 55px rgba(0,0,0,.11);}
+.why-list{list-style:none;margin-top:1rem;}
+.why-list li{display:flex;gap:.85rem;padding:1.05rem 0;border-bottom:1px solid var(--border);}
+.why-list li:last-child{border:none;}
+.wi{width:44px;height:44px;border-radius:10px;flex-shrink:0;background:var(--gpale);border:1px solid #c8e6c9;display:flex;align-items:center;justify-content:center;font-size:1.15rem;}
+.wt h4{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.85rem;margin-bottom:.22rem;}
+.wt p{font-size:.8rem;color:var(--gray);line-height:1.62;}
+
+/* ══ CTA BAND ══ */
+#cta-band{background:var(--gdark);padding:3.5rem 5%;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;}
+#cta-band h2{font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(1.2rem,2.4vw,1.85rem);color:#fff;max-width:540px;line-height:1.3;}
+#cta-band h2 span{color:var(--yellow);}
+.cta-btns{display:flex;gap:.8rem;flex-shrink:0;flex-wrap:wrap;}
+
+/* ══ TESTIMONIALS ══ */
+#testimonials{background:linear-gradient(135deg,var(--gdark),#388e3c);}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;}
+.tcard{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:1.7rem;backdrop-filter:blur(4px);transition:transform .3s,background .3s;}
+.tcard:hover{transform:translateY(-4px);background:rgba(255,255,255,.14);}
+.tstars{color:var(--yellow);font-size:.88rem;letter-spacing:.05em;margin-bottom:.75rem;}
+.tcard blockquote{font-size:.85rem;color:rgba(255,255,255,.88);line-height:1.8;font-style:italic;margin-bottom:1.1rem;}
+.tauthor{display:flex;align-items:center;gap:.65rem;}
+.tav{width:40px;height:40px;border-radius:50%;flex-shrink:0;background:var(--yellow);color:var(--dark);font-family:'Montserrat',sans-serif;font-weight:800;font-size:.82rem;display:flex;align-items:center;justify-content:center;border:2px solid rgba(255,255,255,.25);}
+.tname{font-family:'Montserrat',sans-serif;font-weight:700;color:#fff;font-size:.82rem;}
+.tloc{font-size:.7rem;color:rgba(255,255,255,.52);}
+
+/* ══ CEO ══ */
+.ceo-grid{display:grid;grid-template-columns:1fr 1.6fr;gap:4rem;align-items:center;}
+.ceo-card{background:#fff;border-radius:14px;padding:2.2rem;text-align:center;box-shadow:0 10px 38px rgba(0,0,0,.07);border:1px solid var(--border);}
+.ceo-av{width:105px;height:105px;border-radius:50%;margin:0 auto .9rem;background:linear-gradient(135deg,var(--green),var(--glight));display:flex;align-items:center;justify-content:center;font-size:2.8rem;border:4px solid var(--gpale);box-shadow:0 6px 18px rgba(46,125,50,.18);}
+.ceo-name{font-family:'Montserrat',sans-serif;font-weight:800;font-size:1.05rem;color:var(--dark);}
+.ceo-title{font-size:.72rem;color:var(--green);font-weight:600;text-transform:uppercase;letter-spacing:.1em;margin:.28rem 0 .9rem;}
+.ceo-quote{font-size:.85rem;color:var(--gray);line-height:1.8;font-style:italic;}
+.ceo-sig{margin-top:.9rem;font-family:'Montserrat',sans-serif;font-weight:700;color:var(--gdark);font-size:.88rem;}
+
+/* ══ FAQ ══ */
+.faq-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:4rem;align-items:start;}
+.faq-img{width:100%;height:340px;object-fit:cover;border-radius:12px;box-shadow:0 12px 38px rgba(0,0,0,.09);}
+.faq-list{margin-top:.3rem;}
+.faq-item{border:1px solid var(--border);border-radius:8px;margin-bottom:.75rem;overflow:hidden;}
+.faq-q{padding:.95rem 1.1rem;background:#fff;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-family:'Montserrat',sans-serif;font-weight:600;font-size:.81rem;color:var(--dark);border-left:4px solid transparent;transition:all .2s;gap:.5rem;}
+.faq-item.open .faq-q{background:var(--gpale);border-left-color:var(--green);color:var(--gdark);}
+.faq-arr{transition:transform .3s;font-size:.72rem;color:var(--green);flex-shrink:0;}
+.faq-item.open .faq-arr{transform:rotate(180deg);}
+.faq-a{max-height:0;overflow:hidden;font-size:.81rem;color:var(--gray);line-height:1.74;transition:max-height .35s ease,padding .3s;padding:0 1.1rem;}
+.faq-item.open .faq-a{max-height:220px;padding:.85rem 1.1rem;}
+
+/* ══ CONTACT ══ */
+.contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:3.5rem;align-items:start;}
+.ci{display:flex;gap:.85rem;margin-bottom:1.4rem;align-items:flex-start;}
+.ci-icon{width:42px;height:42px;border-radius:10px;flex-shrink:0;background:var(--gpale);border:1px solid #c8e6c9;display:flex;align-items:center;justify-content:center;font-size:1.05rem;}
+.ci-text strong{display:block;font-family:'Montserrat',sans-serif;font-weight:700;font-size:.78rem;margin-bottom:.18rem;}
+.ci-text a,.ci-text span{font-size:.83rem;color:var(--gray);}
+.ci-text a:hover{color:var(--green);}
+.cf{background:#fff;border:1px solid var(--border);border-radius:12px;padding:2.1rem;box-shadow:0 8px 32px rgba(0,0,0,.06);}
+.cf h3{font-family:'Montserrat',sans-serif;font-weight:800;font-size:1.1rem;margin-bottom:1.3rem;color:var(--dark);}
+.fr{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-bottom:.75rem;}
+.fg{margin-bottom:.75rem;}
+.fg label{display:block;font-family:'Montserrat',sans-serif;font-weight:600;font-size:.7rem;color:var(--dark);margin-bottom:.28rem;text-transform:uppercase;letter-spacing:.05em;}
+.fg input,.fg select,.fg textarea{width:100%;padding:.68rem .88rem;border:1.5px solid var(--border);border-radius:6px;font-family:'Open Sans',sans-serif;font-size:.83rem;color:var(--dark);outline:none;transition:border-color .2s,box-shadow .2s;background:#fff;}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--green);box-shadow:0 0 0 3px rgba(46,125,50,.08);}
+.fg textarea{height:95px;resize:vertical;}
+.cfsub{width:100%;padding:.85rem;background:var(--green);color:#fff;border:none;border-radius:6px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:.85rem;cursor:pointer;transition:background .25s,transform .2s;letter-spacing:.04em;}
+.cfsub:hover{background:var(--gdark);transform:translateY(-1px);}
+
+/* ══ FOOTER ══ */
+footer{background:#0a1a0a;}
+.ft{padding:4rem 5%;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;}
+.fl-wrap{display:flex;align-items:center;gap:.5rem;margin-bottom:.85rem;}
+.fl-box{width:36px;height:36px;border-radius:8px;background:linear-gradient(135deg,var(--green),var(--glight));display:flex;align-items:center;justify-content:center;font-size:1.1rem;}
+.fl-txt{font-family:'Montserrat',sans-serif;font-weight:900;font-size:1.1rem;color:#fff;}
+.fl-txt span{color:var(--yellow);}
+.f-desc{font-size:.8rem;color:rgba(255,255,255,.52);line-height:1.78;margin-bottom:1.1rem;}
+.f-social{display:flex;gap:.45rem;}
+.f-social a{width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.08);font-size:.78rem;display:flex;align-items:center;justify-content:center;transition:background .2s;color:rgba(255,255,255,.65);}
+.f-social a:hover{background:var(--green);}
+footer h5{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--yellow);margin-bottom:.9rem;}
+footer ul{list-style:none;}
+footer ul li{margin-bottom:.42rem;}
+footer ul a{font-size:.8rem;color:rgba(255,255,255,.5);transition:color .2s;}
+footer ul a:hover{color:var(--yellow);}
+.fcta{background:var(--gdark);padding:.55rem 5%;text-align:center;}
+.fcta p{font-size:.76rem;color:rgba(255,255,255,.55);}
+.fcta a{color:var(--yellow);font-weight:700;}
+.fb{background:#060d06;padding:1rem 5%;display:flex;justify-content:space-between;align-items:center;font-size:.74rem;color:rgba(255,255,255,.32);border-top:1px solid rgba(255,255,255,.05);flex-wrap:wrap;gap:.5rem;}
+
+/* ══ WHATSAPP ══ */
+.wa{position:fixed;bottom:1.8rem;right:1.8rem;z-index:998;width:54px;height:54px;border-radius:50%;background:#25d366;color:#fff;font-size:1.6rem;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(37,211,102,.48);animation:wap 2.5s ease-in-out infinite;transition:transform .2s;}
+.wa:hover{transform:scale(1.1);}
+@keyframes wap{0%,100%{box-shadow:0 6px 20px rgba(37,211,102,.45);}50%{box-shadow:0 6px 36px rgba(37,211,102,.68);}}
+
+/* ══ SCROLL REVEAL ══ */
+.rv{opacity:0;transform:translateY(34px);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1);}
+.rv.rl{transform:translateX(-42px);}
+.rv.rr{transform:translateX(42px);}
+.rv.vis{opacity:1!important;transform:none!important;}
+.d1{transition-delay:.1s;}.d2{transition-delay:.2s;}.d3{transition-delay:.3s;}.d4{transition-delay:.4s;}
+
+/* ══ RESPONSIVE ══ */
+@media(max-width:1024px){
+  #topbar,#nav,.sec,#empower,#cta-band,.ft,.fb,.fcta{padding-left:3%;padding-right:3%;}
+  .slide-content{padding:0 3%;}
+  .slide-worker{height:68%;}
+}
+@media(max-width:768px){
+  #topbar{display:none;}
+  #nav ul{display:none;}
+  .logo-text small{display:none;}
+  #hero{height:75vmax;min-height:380px;}
+  .slide-worker{display:none;}
+  #stats-strip{grid-template-columns:repeat(2,1fr);}
+  .sec{padding:3.5rem 4%;}
+  .about-grid,.why-grid,.ceo-grid,.faq-grid,.contact-grid{grid-template-columns:1fr!important;}
+  .about-thumb,.about-badge{display:none;}
+  .exp-grid{grid-template-columns:1fr;}
+  .exp-card:nth-child(2n){border-right:1px solid var(--border);}
+  .proc-grid{grid-template-columns:1fr 1fr;}
+  .proc-grid::before{display:none;}
+  .proj-grid{grid-template-columns:1fr 1fr;}
+  .testi-grid{grid-template-columns:1fr;}
+  #empower{grid-template-columns:1fr;}
+  .ft{grid-template-columns:1fr 1fr;padding:3rem 4%;}
+  .fb{flex-direction:column;text-align:center;}
+  .fr{grid-template-columns:1fr;}
+  #cta-band{flex-direction:column;text-align:center;}
+  .cta-btns{justify-content:center;}
+}
+@media(max-width:480px){
+  .proj-grid,.proc-grid{grid-template-columns:1fr;}
+  .ft{grid-template-columns:1fr;}
+  .emp-cards{grid-template-columns:1fr 1fr;}
+}
+</style>
+</head>
+<body>
+
+<!-- WHATSAPP FLOAT -->
+<a class="wa" href="https://wa.me/923013860608" target="_blank" title="Chat on WhatsApp">💬</a>
+
+<!-- ══ TOPBAR ══ -->
+<div id="topbar">
+  <div class="tb-left">
+    <a href="mailto:rahmatjoyo11@gmail.com">✉ rahmatjoyo11@gmail.com</a>
+    <span>🕐 Mon–Sat 9:00–18:00 | Sunday CLOSED</span>
+  </div>
+  <div class="tb-right">
+    <a class="tb-icon" href="#" title="Facebook">f</a>
+    <a class="tb-icon" href="#" title="YouTube">▶</a>
+    <a class="tb-icon" href="#" title="Instagram">📷</a>
+    <a class="tb-icon" href="https://wa.me/923013860608" target="_blank">💬</a>
+  </div>
+</div>
+
+<!-- ══ NAV ══ -->
+<nav id="nav">
+  <div class="logo-wrap">
+    <div class="logo-img-box">☀️</div>
+    <div class="logo-text">
+      1° <span>Solar</span> Solution
+      <small>Attock, Punjab · Est. 2014</small>
+    </div>
+  </div>
+  <ul>
+    <li><a href="#hero">Home</a></li>
+    <li>
+      <a href="#about">About ▾</a>
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#ceo">CEO Message</a></li>
+        <li><a href="#why">Why Choose Us</a></li>
+      </ul>
+    </li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#expertise">Services</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#contact">Quotation</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a class="nav-cta" href="tel:+923013860608">📞 0301‑386‑0608</a>
+</nav>
+
+<!-- ══ HERO SLIDER ══ -->
+<section id="hero">
+  <div class="slide active">
+    <div class="slide-bg" style="background-image:url('https://images.pexels.com/photos/414837/pexels-photo-414837.jpeg?auto=compress&cs=tinysrgb&w=1600')"></div>
+    <div class="slide-overlay"></div>
+    <div class="slide-content">
+      <div class="slide-tag">⭐ Pakistan's Trusted Solar Company</div>
+      <h1>Best Solar Installation Company in <em>Attock, Punjab</em></h1>
+      <p>1° Solar Solution provides premium solar panel and lithium battery installation for homes, businesses, industries, and farms across Punjab, Pakistan.</p>
+      <div class="slide-btns">
+        <a href="#expertise" class="s-btn s-btn-main">Explore Services</a>
+        <a href="#contact" class="s-btn s-btn-outline">Get Free Quote</a>
+      </div>
+    </div>
+    <img class="slide-worker" src="https://egreensolarenergy.pk/wp-content/uploads/2023/02/builder-orange-helmet-against-industrial-min.png" alt="Solar Engineer" onerror="this.style.display='none'">
+  </div>
+  <div class="slide">
+    <div class="slide-bg" style="background-image:url('https://images.pexels.com/photos/9875441/pexels-photo-9875441.jpeg?auto=compress&cs=tinysrgb&w=1600')"></div>
+    <div class="slide-overlay"></div>
+    <div class="slide-content">
+      <div class="slide-tag">☀️ Clean Energy Specialists</div>
+      <h1>Step Into a <em>Sustainable Future</em> of Solar Power</h1>
+      <p>Smart solar solutions for residential, industrial, commercial and agriculture sites. Save up to 90% on your electricity bills with our certified engineers.</p>
+      <div class="slide-btns">
+        <a href="#projects" class="s-btn s-btn-main">View Projects</a>
+        <a href="#contact" class="s-btn s-btn-outline">Book Appointment</a>
+      </div>
+    </div>
+    <img class="slide-worker" src="https://egreensolarenergy.pk/wp-content/uploads/2023/02/builder-orange-helmet-against-industrial-min.png" alt="Solar Engineer" onerror="this.style.display='none'">
+  </div>
+  <div class="slide">
+    <div class="slide-bg" style="background-image:url('https://images.pexels.com/photos/8853502/pexels-photo-8853502.jpeg?auto=compress&cs=tinysrgb&w=1600')"></div>
+    <div class="slide-overlay"></div>
+    <div class="slide-content">
+      <div class="slide-tag">🔋 Lithium Battery Experts</div>
+      <h1><em>Lithium Battery Storage</em> — Power Through Load-Shedding 24/7</h1>
+      <p>Never worry about load-shedding again. Our LiFePO4 lithium battery systems provide complete energy independence for your home or business.</p>
+      <div class="slide-btns">
+        <a href="#expertise" class="s-btn s-btn-main">Learn More</a>
+        <a href="tel:+923013860608" class="s-btn s-btn-outline">📞 Call Now</a>
+      </div>
+    </div>
+    <img class="slide-worker" src="https://egreensolarenergy.pk/wp-content/uploads/2023/02/builder-orange-helmet-against-industrial-min.png" alt="Solar Engineer" onerror="this.style.display='none'">
+  </div>
+  <button class="sarrow sa-prev" id="prevBtn">&#8592;</button>
+  <button class="sarrow sa-next" id="nextBtn">&#8594;</button>
+  <div class="slider-dots">
+    <button class="dot active"></button>
+    <button class="dot"></button>
+    <button class="dot"></button>
+  </div>
+</section>
+
+<!-- ══ STATS ══ -->
+<div id="stats-strip">
+  <div class="stp rv d1"><div class="stp-num" data-to="10" data-sfx="+">0<sup>+</sup></div><div class="stp-lbl">Years of Experience</div></div>
+  <div class="stp rv d2"><div class="stp-num" data-to="500" data-sfx="+">0<sup>+</sup></div><div class="stp-lbl">Projects Completed</div></div>
+  <div class="stp rv d3"><div class="stp-num" data-to="2" data-sfx="MW+">0<sup>MW+</sup></div><div class="stp-lbl">Installed Capacity</div></div>
+  <div class="stp rv d4"><div class="stp-num" data-to="100" data-sfx="%">0<sup>%</sup></div><div class="stp-lbl">Customer Satisfaction</div></div>
+</div>
+
+<!-- ══ ABOUT ══ -->
+<section id="about" class="sec">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-imgs rv rl">
+        <img class="about-main" src="https://images.pexels.com/photos/9875393/pexels-photo-9875393.jpeg?auto=compress&cs=tinysrgb&w=800" alt="1° Solar Solution installation team" onerror="this.src='https://images.pexels.com/photos/414837/pexels-photo-414837.jpeg?auto=compress&w=800'">
+        <img class="about-thumb" src="https://images.pexels.com/photos/9875441/pexels-photo-9875441.jpeg?auto=compress&cs=tinysrgb&w=320" alt="Solar worker" onerror="this.style.display='none'">
+        <div class="about-badge"><div class="num">10+</div><div class="lbl">Years in Industry</div></div>
+      </div>
+      <div class="rv rr">
+        <div class="eyebrow">About Us</div>
+        <h2 class="sh2">1° Solar Solution — Leading Solar Company in Attock, Punjab</h2>
+        <div class="divbar"></div>
+        <p class="sp" style="max-width:100%">1° Solar Solution stands as the premier solar installation company in Attock, Punjab, Pakistan. With over <strong>10 years of experience</strong>, we specialize in delivering advanced solar systems across the region. Founded and led by <strong>Majid Hussain</strong>, we provide affordable, high-quality solar solutions for residential, commercial, industrial, and agricultural sectors. As electricity costs rise, solar power has become essential — and we lead the way with cutting-edge technology and certified engineers.</p>
+        <ul class="about-pts">
+          <li><div class="chk">✓</div><div><strong>Certified & Licensed Engineers</strong>Every installation handled by fully qualified solar engineers with complete electrical certifications.</div></li>
+          <li><div class="chk">✓</div><div><strong>Net-Metering Handled End-to-End</strong>We manage all WAPDA/DISCO applications and government documentation for you.</div></li>
+          <li><div class="chk">✓</div><div><strong>25-Year Panel Warranty</strong>Premium monocrystalline panels with industry-leading performance guarantees.</div></li>
+          <li><div class="chk">✓</div><div><strong>Flexible Installment Plans</strong>Easy payment options to make solar accessible to every home and business.</div></li>
+        </ul>
+        <a href="#contact" class="btn btn-g" style="margin-top:1.4rem">Read More</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ EXPERTISE ══ -->
+<section id="expertise" class="sec sec-alt">
+  <div class="wrap">
+    <div class="rv" style="text-align:center;margin-bottom:2.8rem;">
+      <div class="eyebrow">Our Expertise</div>
+      <h2 class="sh2">Powering Homes, Businesses, Industries &amp; Farms in Attock</h2>
+      <div class="divbar divbar-c"></div>
+      <p class="sp" style="margin:0 auto;max-width:600px">1° Solar Solution is your complete solution for all solar services. Cross-industry experience ensures tailored solutions for your specific project needs.</p>
+    </div>
+    <div class="exp-grid">
+      <div class="exp-card rv d1">
+        <img class="exp-icon" src="https://images.pexels.com/photos/9875393/pexels-photo-9875393.jpeg?auto=compress&cs=tinysrgb&w=128" alt="Residential" onerror="this.style.fontSize='2.5rem';this.alt='🏠';this.src=''">
+        <div class="exp-body"><h3>Residential Solar Panel Installation</h3><p>Expert residential solar panel installation in Attock, Punjab. Efficient, reliable solar systems to power your home with clean, renewable energy.</p><span class="exp-lnk">Learn more →</span></div>
+      </div>
+      <div class="exp-card rv d2">
+        <img class="exp-icon" src="https://images.pexels.com/photos/356036/pexels-photo-356036.jpeg?auto=compress&cs=tinysrgb&w=128" alt="Commercial" onerror="this.style.background='#e8f5e9'">
+        <div class="exp-body"><h3>Commercial Solar Power Installation</h3><p>Elevate your business with sustainable energy. Customized commercial solar solutions for long-term savings and sustainability in Attock, Punjab.</p><span class="exp-lnk">Learn more →</span></div>
+      </div>
+      <div class="exp-card rv d1">
+        <img class="exp-icon" src="https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg?auto=compress&cs=tinysrgb&w=128" alt="Industrial" onerror="this.style.background='#e8f5e9'">
+        <div class="exp-body"><h3>Industrial Solar System Installation</h3><p>Transform your factory or warehouse with tailored industrial solar panels. Ensure efficient, cost-effective power for your industrial operations.</p><span class="exp-lnk">Learn more →</span></div>
+      </div>
+      <div class="exp-card rv d2">
+        <img class="exp-icon" src="https://images.pexels.com/photos/974314/pexels-photo-974314.jpeg?auto=compress&cs=tinysrgb&w=128" alt="Agriculture Tubewell" onerror="this.style.background='#e8f5e9'">
+        <div class="exp-body"><h3>Agriculture Solar Tubewell Installation</h3><p>Best solar tubewell installation in Punjab. We specialize in solar systems for tubewells, farm panels, and complete agricultural irrigation solutions.</p><span class="exp-lnk">Learn more →</span></div>
+      </div>
+      <div class="exp-card rv d1">
+        <img class="exp-icon" src="https://images.pexels.com/photos/8853502/pexels-photo-8853502.jpeg?auto=compress&cs=tinysrgb&w=128" alt="Lithium Battery" onerror="this.style.background='#e8f5e9'">
+        <div class="exp-body"><h3>Lithium Battery Storage Systems</h3><p>LiFePO4 lithium battery storage for homes and businesses. Stay powered during load-shedding with 6000+ cycle life and smart BMS protection.</p><span class="exp-lnk">Learn more →</span></div>
+      </div>
+      <div class="exp-card rv d2">
+        <img class="exp-icon" src="https://images.pexels.com/photos/9875441/pexels-photo-9875441.jpeg?auto=compress&cs=tinysrgb&w=128" alt="Off-Grid Solar" onerror="this.style.background='#e8f5e9'">
+        <div class="exp-body"><h3>Off-Grid Solar Systems</h3><p>Complete off-grid setups for remote properties across Punjab. Full energy independence combining solar panels, lithium batteries and generators.</p><span class="exp-lnk">Learn more →</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ EMPOWER BAND ══ -->
+<section id="empower">
+  <div class="emp-txt rv rl">
+    <div class="eyebrow eyebrow-w">Best Solar Energy Company in Attock</div>
+    <h2 class="sh2 sh2-w">Empowering Attock with Sustainable Energy Solutions</h2>
+    <div class="divbar" style="background:linear-gradient(90deg,var(--yellow),rgba(255,255,255,.5))"></div>
+    <p class="sp sp-w">Transforming Attock with state-of-the-art solar technology. 1° Solar Solution is dedicated to harnessing the abundant energy of the sun to power homes and businesses across all of Punjab, Pakistan.</p>
+    <ul class="emp-feat">
+      <li><span class="edot"></span>Cost-efficient solutions without compromising quality</li>
+      <li><span class="edot"></span>Expert installation and after-sales maintenance</li>
+      <li><span class="edot"></span>Net metering applications handled end-to-end</li>
+      <li><span class="edot"></span>Flexible installment plans available for all clients</li>
+    </ul>
+  </div>
+  <div class="emp-cards rv rr">
+    <div class="emp-c"><div class="num" data-to="10" data-sfx="+">0+</div><div class="lbl">Years Experience</div></div>
+    <div class="emp-c"><div class="num" data-to="500" data-sfx="+">0+</div><div class="lbl">Projects Done</div></div>
+    <div class="emp-c"><div class="num" data-to="2" data-sfx="MW">0MW</div><div class="lbl">Installed Capacity</div></div>
+    <div class="emp-c"><div class="num" data-to="1" data-sfx=" Office">1 Office</div><div class="lbl">Attock, Punjab</div></div>
+  </div>
+</section>
+
+<!-- ══ PROCESS ══ -->
+<section id="process" class="sec sec-alt">
+  <div class="wrap">
+    <div class="rv" style="text-align:center;margin-bottom:3.5rem;">
+      <div class="eyebrow">Working Process</div>
+      <h2 class="sh2">Understanding Our Simple Process</h2>
+      <div class="divbar divbar-c"></div>
+      <p class="sp" style="margin:0 auto">Our work process is simple and crafted to keep things easy for our clients from day one.</p>
+    </div>
+    <div class="proc-grid">
+      <div class="proc-card rv d1">
+        <div class="proc-n">01</div>
+        <img class="proc-img" src="https://images.pexels.com/photos/3585089/pexels-photo-3585089.jpeg?auto=compress&cs=tinysrgb&w=120" alt="Contact" onerror="this.style.display='none'">
+        <h4>Get In Contact</h4>
+        <p>Fill our form or call us to get answers and understand how to go solar.</p>
+      </div>
+      <div class="proc-card rv d2">
+        <div class="proc-n">02</div>
+        <img class="proc-img" src="https://images.pexels.com/photos/1181605/pexels-photo-1181605.jpeg?auto=compress&cs=tinysrgb&w=120" alt="Appointment" onerror="this.style.display='none'">
+        <h4>Book Appointment</h4>
+        <p>Schedule at the best time with one of our certified solar experts.</p>
+      </div>
+      <div class="proc-card rv d3">
+        <div class="proc-n">03</div>
+        <img class="proc-img" src="https://images.pexels.com/photos/9875441/pexels-photo-9875441.jpeg?auto=compress&cs=tinysrgb&w=120" alt="Installation" onerror="this.style.display='none'">
+        <h4>Solar Installation</h4>
+        <p>Solar panel system installed by our expert team within 48 hours.</p>
+      </div>
+      <div class="proc-card rv d4">
+        <div class="proc-n">04</div>
+        <img class="proc-img" src="https://images.pexels.com/photos/414837/pexels-photo-414837.jpeg?auto=compress&cs=tinysrgb&w=120" alt="Enjoy" onerror="this.style.display='none'">
+        <h4>Enjoy Free Energy</h4>
+        <p>Go live and enjoy free energy with complete independence from day one.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PROJECTS ══ -->
+<section id="projects" class="sec">
+  <div class="wrap">
+    <div class="rv" style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:2.4rem;flex-wrap:wrap;gap:1rem;">
+      <div><div class="eyebrow">Our Recent Projects</div><h2 class="sh2" style="margin-bottom:0">1° Solar Solution – Projects Showcase</h2><div class="divbar"></div></div>
+      <a href="#contact" class="btn btn-g">All Projects</a>
+    </div>
+    <div class="proj-grid">
+      <div class="proj-card rv d1">
+        <div class="proj-img-wrap">
+          <img class="proj-img" src="https://images.pexels.com/photos/9875393/pexels-photo-9875393.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Residential Solar Attock" onerror="this.src='https://images.pexels.com/photos/414837/pexels-photo-414837.jpeg?auto=compress&w=600'">
+          <span class="proj-tag">Residential</span>
+        </div>
+        <div class="proj-body"><h4>10KW Hybrid Solar System — Attock City</h4><p>Fully hybrid rooftop system with lithium battery backup for a family home.</p><span class="proj-lnk">Discover More →</span></div>
+      </div>
+      <div class="proj-card rv d2">
+        <div class="proj-img-wrap">
+          <img class="proj-img" src="https://images.pexels.com/photos/356036/pexels-photo-356036.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Commercial Solar" onerror="this.src='https://images.pexels.com/photos/414837/pexels-photo-414837.jpeg?auto=compress&w=600'">
+          <span class="proj-tag">Commercial</span>
+        </div>
+        <div class="proj-body"><h4>25KW On-Grid Solar — Commercial Plaza, Hazro</h4><p>On-grid solar with net metering for a commercial plaza in Hazro, Attock.</p><span class="proj-lnk">Discover More →</span></div>
+      </div>
+      <div class="proj-card rv d3">
+        <div class="proj-img-wrap">
+          <img class="proj-img" src="https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Industrial Solar" onerror="this.src='https://images.pexels.com/photos/414837/pexels-photo-414837.jpeg?auto=compress&w=600'">
+          <span class="proj-tag">Industrial</span>
+        </div>
+        <div class="proj-body"><h4>100KW Industrial Solar — Factory Unit, Attock</h4><p>Large-scale on-grid solar installation for a manufacturing unit in Attock.</p><span class="proj-lnk">Discover More →</span></div>
+      </div>
+      <div class="proj-card rv d1">
+        <div class="proj-img-wrap">
+          <img class="proj-img" src="https://images.pexels.com/photos/974314/pexels-photo-974314.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Agriculture Tubewell" onerror="this.src='https://images.pexels.com/photos/414837/pexels-photo-414837.jpeg?auto=compress&w=600'">
+          <span class="proj-tag">Agriculture</span>
+        </div>
+        <div class="proj-body"><h4>15KW Solar Tubewell — Fateh Jang, Attock</h4><p>Solar-powered tubewell for agricultural irrigation in Fateh Jang tehsil.</p><span class="proj-lnk">Discover More →</span></div>
+      </div>
+      <div class="proj-card rv d2">
+        <div class="proj-img-wrap">
+          <img class="proj-img" src="https://images.pexels.com/photos/8853502/pexels-photo-8853502.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Lithium Battery" onerror="this.src='https://images.pexels.com/photos/414837/pexels-photo-414837.jpeg?auto=compress&w=600'">
+          <span class="proj-tag">Battery Storage</span>
+        </div>
+        <div class="proj-body"><h4>20kWh LiFePO4 Battery System — Hazro</h4><p>Lithium battery backup alongside a 12KW solar system for 24/7 power.</p><span class="proj-lnk">Discover More →</span></div>
+      </div>
+      <div class="proj-card rv d3">
+        <div class="proj-img-wrap">
+          <img class="proj-img" src="https://images.pexels.com/photos/9875441/pexels-photo-9875441.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Off Grid" onerror="this.src='https://images.pexels.com/photos/414837/pexels-photo-414837.jpeg?auto=compress&w=600'">
+          <span class="proj-tag">Off-Grid</span>
+        </div>
+        <div class="proj-body"><h4>8KW Off-Grid System — Remote Village, Attock</h4><p>Complete off-grid solar + battery solution for a village with no grid access.</p><span class="proj-lnk">Discover More →</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ WHY CHOOSE US ══ -->
+<section id="why" class="sec sec-alt">
+  <div class="wrap">
+    <div class="why-grid">
+      <div class="rv rl">
+        <img class="why-img" src="https://images.pexels.com/photos/9875415/pexels-photo-9875415.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Why choose 1° Solar Solution" onerror="this.src='https://images.pexels.com/photos/414837/pexels-photo-414837.jpeg?auto=compress&w=800'">
+      </div>
+      <div class="rv rr">
+        <div class="eyebrow">Why Choose Us</div>
+        <h2 class="sh2">Why 1° Solar Solution Stands Out</h2>
+        <div class="divbar"></div>
+        <p class="sp" style="max-width:100%">Discover the 1° Solar Solution advantage — your trusted solar partner for a sustainable and cost-effective tomorrow across Punjab, Pakistan.</p>
+        <ul class="why-list">
+          <li><div class="wi">🏆</div><div class="wt"><h4>10+ Years of Proven Expertise</h4><p>Over a decade delivering top-notch solar installations across Attock and all of Punjab, Pakistan.</p></div></li>
+          <li><div class="wi">💰</div><div class="wt"><h4>Cost-Efficient Savings</h4><p>Save up to 90% on electricity bills. ROI typically achieved within just 2–3 years.</p></div></li>
+          <li><div class="wi">🎯</div><div class="wt"><h4>Customized Solar Solutions</h4><p>Every system uniquely designed for your energy needs, location, roof type, and budget.</p></div></li>
+          <li><div class="wi">🛡️</div><div class="wt"><h4>Full Warranty & After-Sales Support</h4><p>25-year panel warranty, 10-year installation guarantee, dedicated after-sales support.</p></div></li>
+        </ul>
+        <a href="#contact" class="btn btn-g" style="margin-top:.9rem">Make an Appointment</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CTA BAND ══ -->
+<div id="cta-band" class="rv">
+  <h2>Want To Switch To Solar Now?<br><span>Contact our solar experts — Attock, Punjab, Pakistan.</span></h2>
+  <div class="cta-btns">
+    <a href="tel:+923013860608" class="btn btn-y">📞 0301‑386‑0608</a>
+    <a href="https://wa.me/923013860608" class="btn btn-ol" target="_blank">💬 WhatsApp</a>
+  </div>
+</div>
+
+<!-- ══ TESTIMONIALS ══ -->
+<section id="testimonials" class="sec">
+  <div class="wrap">
+    <div class="rv" style="text-align:center;margin-bottom:2.8rem;">
+      <div class="eyebrow eyebrow-w">Client Stories</div>
+      <h2 class="sh2 sh2-w">What Our Clients Say</h2>
+      <div class="divbar divbar-c" style="background:linear-gradient(90deg,var(--yellow),rgba(255,255,255,.4))"></div>
+    </div>
+    <div class="testi-grid">
+      <div class="tcard rv d1"><div class="tstars">★★★★★</div><blockquote>"Our electricity bill dropped from Rs. 35,000 to under Rs. 3,500 per month. 1° Solar Solution's team was professional and installation completed in just two days. Highly recommended!"</blockquote><div class="tauthor"><div class="tav">AK</div><div><div class="tname">Ahmad Khan</div><div class="tloc">Attock City, Punjab</div></div></div></div>
+      <div class="tcard rv d2"><div class="tstars">★★★★★</div><blockquote>"Installed a 20kWh lithium battery with 15KW solar panels. We now run completely during load-shedding. Majid Hussain's team is simply the best solar company in the region!"</blockquote><div class="tauthor"><div class="tav">MR</div><div><div class="tname">Muhammad Rashid</div><div class="tloc">Hazro, Attock</div></div></div></div>
+      <div class="tcard rv d3"><div class="tstars">★★★★★</div><blockquote>"The agricultural tubewell solar system saved us lakhs in diesel costs. 1° Solar Solution handled everything from design to WAPDA net metering. Excellent service and great value!"</blockquote><div class="tauthor"><div class="tav">ZA</div><div><div class="tname">Zafar Ahmed</div><div class="tloc">Fateh Jang, Attock</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CEO ══ -->
+<section id="ceo" class="sec sec-alt">
+  <div class="wrap">
+    <div class="ceo-grid">
+      <div class="ceo-card rv rl">
+        <div class="ceo-av">👨‍💼</div>
+        <div class="ceo-name">Majid Hussain</div>
+        <div class="ceo-title">Founder &amp; CEO — 1° Solar Solution</div>
+        <p class="ceo-quote">"Our mission is to empower every home and business in Attock with clean, affordable solar energy. We believe solar power is not a luxury — it is a right. Together, let us build a greener Punjab."</p>
+        <div class="ceo-sig">— Majid Hussain</div>
+      </div>
+      <div class="rv rr">
+        <div class="eyebrow">CEO Message</div>
+        <h2 class="sh2">Solar Excellence in Attock: 10 Years of Innovation</h2>
+        <div class="divbar"></div>
+        <p class="sp" style="max-width:100%;margin-bottom:1rem">At 1° Solar Solution, our mission is to empower Attock and all of Punjab with sustainable energy solutions. With over 10 years of pioneering solar technology in the region, we are committed to creating a greener, more eco-friendly future for our community.</p>
+        <p class="sp" style="max-width:100%;margin-bottom:1.5rem">Choose 1° Solar Solution for the best solar solutions in Attock. As the leading solar company in the district, we provide innovative, efficient, and cost-effective solar systems tailored to your specific needs. Join us in making Punjab a leader in solar energy and sustainable living.</p>
+        <a href="#contact" class="btn btn-g">Book a Consultation</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FAQ ══ -->
+<section id="faq" class="sec">
+  <div class="wrap">
+    <div class="faq-grid">
+      <div class="rv rl">
+        <div class="eyebrow">FAQ</div>
+        <h2 class="sh2">Frequently Asked Questions</h2>
+        <div class="divbar"></div>
+        <p class="sp" style="max-width:100%;margin-bottom:1.4rem">Got questions about going solar? We have answers to the most common questions our customers ask.</p>
+        <img class="faq-img" src="https://images.pexels.com/photos/9875400/pexels-photo-9875400.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Solar installation FAQ" onerror="this.src='https://images.pexels.com/photos/414837/pexels-photo-414837.jpeg?auto=compress&w=700'">
+      </div>
+      <div class="faq-list rv rr">
+        <div class="faq-item open"><div class="faq-q">How much does a solar system cost in Attock?<span class="faq-arr">▼</span></div><div class="faq-a">A basic 5KW system starts from around Rs. 700,000–900,000 including installation. Cost depends on system size, type (on-grid, off-grid, hybrid), and battery storage. We provide free site assessments and detailed quotes with no obligation.</div></div>
+        <div class="faq-item"><div class="faq-q">How long does installation take?<span class="faq-arr">▼</span></div><div class="faq-a">For a standard residential system, installation is typically completed within 48 hours after permits are approved. Larger commercial or industrial projects may take 3–7 days depending on scope.</div></div>
+        <div class="faq-item"><div class="faq-q">What is net metering and how does it work?<span class="faq-arr">▼</span></div><div class="faq-a">Net metering lets you sell excess solar electricity back to WAPDA/DISCO. Your meter runs backwards when production exceeds usage, earning bill credits. 1° Solar Solution handles the entire net metering application process for you.</div></div>
+        <div class="faq-item"><div class="faq-q">Do I need a lithium battery with solar panels?<span class="faq-arr">▼</span></div><div class="faq-a">Not always. On-grid systems work without batteries. However, given Pakistan's load-shedding, adding a lithium battery storage system ensures 24/7 power regardless of grid outages — highly recommended for Attock.</div></div>
+        <div class="faq-item"><div class="faq-q">What warranties do you provide?<span class="faq-arr">▼</span></div><div class="faq-a">25-year performance warranty on panels, 10-year product warranty on inverters, 10-year warranty on LiFePO4 batteries, and a 10-year workmanship guarantee on all our installations.</div></div>
+        <div class="faq-item"><div class="faq-q">Do you serve areas outside Attock?<span class="faq-arr">▼</span></div><div class="faq-a">Yes! While based in Attock, we serve all of Punjab including Rawalpindi, Chakwal, Mianwali, Jhelum, and surrounding districts. Contact us to discuss your project location.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CONTACT ══ -->
+<section id="contact" class="sec sec-alt">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="rv rl">
+        <div class="eyebrow">Get In Touch</div>
+        <h2 class="sh2">We're Here To Help You Go Solar</h2>
+        <div class="divbar"></div>
+        <p class="sp" style="max-width:100%;margin-bottom:1.8rem">Contact us for a free consultation, site assessment, and detailed quotation. Our solar experts are available 6 days a week.</p>
+        <div class="ci"><div class="ci-icon">📞</div><div class="ci-text"><strong>Phone &amp; WhatsApp</strong><a href="tel:+923013860608">0301‑386‑0608</a></div></div>
+        <div class="ci"><div class="ci-icon">✉️</div><div class="ci-text"><strong>Email Address</strong><a href="mailto:rahmatjoyo11@gmail.com">rahmatjoyo11@gmail.com</a></div></div>
+        <div class="ci"><div class="ci-icon">📍</div><div class="ci-text"><strong>Office Location</strong><span>Attock, Punjab, Pakistan</span></div></div>
+        <div class="ci"><div class="ci-icon">🕐</div><div class="ci-text"><strong>Working Hours</strong><span>Monday–Saturday: 9:00 AM – 6:00 PM</span></div></div>
+        <div class="ci"><div class="ci-icon">👨‍💼</div><div class="ci-text"><strong>CEO / Founder</strong><span>Majid Hussain</span></div></div>
+        <div style="margin-top:1.4rem;border-radius:10px;overflow:hidden;border:1px solid var(--border);">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d108614!2d72.36!3d33.77!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38df9f50b5a2c565%3A0x0!2sAttock%2C+Punjab%2C+Pakistan!5e0!3m2!1sen!2spk!4v1" width="100%" height="190" style="border:0;display:block;" allowfullscreen loading="lazy"></iframe>
+        </div>
+      </div>
+      <div class="cf rv rr">
+        <h3>📋 Request a Free Solar Quote</h3>
+        <div class="fr">
+          <div class="fg"><label>Full Name *</label><input type="text" placeholder="e.g. Ahmad Khan"></div>
+          <div class="fg"><label>Phone *</label><input type="tel" placeholder="03XX-XXXXXXX"></div>
+        </div>
+        <div class="fg"><label>Email Address</label><input type="email" placeholder="your@email.com"></div>
+        <div class="fg"><label>Service Required</label><select><option value="">— Select Service —</option><option>Residential Solar System</option><option>Commercial Solar System</option><option>Industrial Solar System</option><option>Agriculture Solar Tubewell</option><option>Lithium Battery Storage</option><option>Off-Grid Solar System</option><option>Net Metering</option><option>Maintenance &amp; Repair</option></select></div>
+        <div class="fg"><label>System Size</label><select><option value="">— Approx. Size —</option><option>3 KW</option><option>5 KW</option><option>10 KW</option><option>15 KW</option><option>20 KW</option><option>25 KW</option><option>50 KW+</option><option>100 KW+</option></select></div>
+        <div class="fg"><label>Your Location</label><input type="text" placeholder="City / Area e.g. Attock, Hazro, Fateh Jang"></div>
+        <div class="fg"><label>Message / Requirements</label><textarea placeholder="Tell us about your energy needs, monthly bill, or any questions..."></textarea></div>
+        <button class="cfsub" onclick="alert('Thank you! We will contact you within 24 hours.\nDirect line: 0301-386-0608')">📩 Send Quote Request</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="ft">
+    <div>
+      <div class="fl-wrap">
+        <div class="fl-box">☀️</div>
+        <div class="fl-txt">1° <span>Solar</span> Solution</div>
+      </div>
+      <p class="f-desc">1° Solar Solution is Attock's trusted solar installation company. We deliver clean, affordable solar power solutions for homes, businesses, industries and farms across Punjab, Pakistan.</p>
+      <div class="f-social">
+        <a href="#" title="Facebook">f</a>
+        <a href="#" title="YouTube">▶</a>
+        <a href="#" title="Instagram">📷</a>
+        <a href="https://wa.me/923013860608" target="_blank">💬</a>
+      </div>
+    </div>
+    <div>
+      <h5>Quick Links</h5>
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#ceo">CEO Message</a></li>
+        <li><a href="#expertise">Our Services</a></li>
+        <li><a href="#projects">Our Projects</a></li>
+        <li><a href="#faq">FAQs</a></li>
+        <li><a href="#contact">Quotation</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Services</h5>
+      <ul>
+        <li><a href="#expertise">Residential Solar</a></li>
+        <li><a href="#expertise">Commercial Solar</a></li>
+        <li><a href="#expertise">Industrial Solar</a></li>
+        <li><a href="#expertise">Agriculture Tubewell</a></li>
+        <li><a href="#expertise">Lithium Battery</a></li>
+        <li><a href="#expertise">Net Metering</a></li>
+        <li><a href="#expertise">Off-Grid Systems</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Contact</h5>
+      <ul>
+        <li><a href="tel:+923013860608">📞 0301‑386‑0608</a></li>
+        <li><a href="mailto:rahmatjoyo11@gmail.com">✉ rahmatjoyo11@gmail.com</a></li>
+        <li><a href="#">📍 Attock, Punjab, Pakistan</a></li>
+        <li><a href="#">🕐 Mon–Sat: 9am–6pm</a></li>
+        <li><a href="#ceo">👨‍💼 Majid Hussain</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="fcta"><p>Need Help? We're here to answer your questions — <a href="tel:+923013860608">Call 0301‑386‑0608</a></p></div>
+  <div class="fb">
+    <span>© 2026 1° Solar Solution. All Rights Reserved. | Attock, Punjab, Pakistan</span>
+    <span>Built for a Greener Punjab ☀️</span>
+  </div>
+</footer>
+
+<script>
+/* SLIDER */
+let cur=0;
+const slides=document.querySelectorAll('.slide');
+const dots=document.querySelectorAll('.dot');
+function goTo(n){
+  slides[cur].classList.remove('active');dots[cur].classList.remove('active');
+  cur=(n+slides.length)%slides.length;
+  slides[cur].classList.add('active');dots[cur].classList.add('active');
+}
+document.getElementById('nextBtn').addEventListener('click',()=>goTo(cur+1));
+document.getElementById('prevBtn').addEventListener('click',()=>goTo(cur-1));
+dots.forEach((d,i)=>d.addEventListener('click',()=>goTo(i)));
+let auto=setInterval(()=>goTo(cur+1),5500);
+document.getElementById('hero').addEventListener('mouseenter',()=>clearInterval(auto));
+document.getElementById('hero').addEventListener('mouseleave',()=>{auto=setInterval(()=>goTo(cur+1),5500);});
+
+/* SCROLL REVEAL */
+const rvEls=document.querySelectorAll('.rv');
+new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');}});
+},{threshold:.1}).observe=function(el){IntersectionObserver.prototype.observe.call(this,el);};
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');}});},{threshold:.1});
+rvEls.forEach(el=>obs.observe(el));
+
+/* COUNTERS */
+function cnt(el,to,sfx,dur=1600){
+  let v=0;const step=to/(dur/16);
+  const t=setInterval(()=>{v+=step;if(v>=to){v=to;clearInterval(t);}
+  el.innerHTML=Math.floor(v)+'<sup>'+sfx+'</sup>';},16);
+}
+const cobs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(!e.isIntersecting||e.target.dataset.done)return;
+    e.target.dataset.done='1';
+    const el=e.target.querySelector('[data-to]');
+    if(el){cnt(el,+el.dataset.to,el.dataset.sfx||'');}
+  });
+},{threshold:.5});
+document.querySelectorAll('.stp,.emp-c').forEach(el=>cobs.observe(el));
+
+/* FAQ */
+document.querySelectorAll('.faq-q').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const item=btn.parentElement;const was=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+    if(!was)item.classList.add('open');
+  });
+});
+
+/* NAV */
+window.addEventListener('scroll',()=>{
+  document.getElementById('nav').style.boxShadow=window.scrollY>60?'0 4px 26px rgba(0,0,0,.13)':'0 2px 16px rgba(0,0,0,.09)';
+});
+</script>
+</body>
+</html>
